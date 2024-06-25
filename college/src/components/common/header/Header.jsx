@@ -33,7 +33,7 @@ const Header = () => {
           className="fixed top-5 left-5 z-50 text-gray-500 border-none cursor-pointer text-2xl mr-8"
           onClick={() => setClick(!click)}
         >
-          {click ? <i className='fa fa-times'> </i> : <i className='fa fa-bars text-gray-600mi'></i>}
+          {click ? <i className='fa fa-times'> </i> : <i className='fa fa-bars text-gray-600 '></i>}
         </button>
         <nav
           className={`fixed left-0 top-0 h-full w-64 bg-teal-400 shadow-lg transform ${
