@@ -78,7 +78,7 @@ const Login = () => {
         </form>
         <button
           onClick={handleGoogleLogin}
-          className="bg-red-500 w-full py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-200 bg-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="bg-red-500 w-full py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-200 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
           Login with Google
         </button>
