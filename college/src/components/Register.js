@@ -33,12 +33,12 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="max-w-md w-full bg-white p-8 rounded shadow-lg">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4 sm:p-6 lg:p-8">
+      <div className="max-w-md w-full bg-white p-8 rounded shadow-lg space-y-4">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         {error && <p className="text-red-500 mb-4">{error}</p>}
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">
               Name
             </label>
@@ -50,7 +50,7 @@ const Register = () => {
               required
             />
           </div>
-          <div className="mb-4">
+          <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email
             </label>
@@ -62,7 +62,7 @@ const Register = () => {
               required
             />
           </div>
-          <div className="mb-4">
+          <div>
             <label htmlFor="password" className="block text-sm font-medium text-gray-700">
               Password
             </label>
@@ -74,7 +74,7 @@ const Register = () => {
               required
             />
           </div>
-          <div className="mb-4">
+          <div>
             <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700">
               Phone Number
             </label>
@@ -94,7 +94,7 @@ const Register = () => {
           </button>
           <button
             onClick={() => navigate('/login')}
-            className="w-full py-2 mt-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+            className="w-full py-2 mt-4 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
           >
             Login
           </button>

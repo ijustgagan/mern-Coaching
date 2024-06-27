@@ -1,8 +1,44 @@
-import React from "react"
-import { blog } from "../../../dummydata"
-import "./footer.css"
+import React, { useState } from "react";
+import { blog } from "../../../dummydata"; // Replace with your actual data source
+import "./footer.css";
+import { Widget, addResponseMessage, addUserMessage } from 'react-chat-widget';
+import 'react-chat-widget/lib/styles.css';
 
 const Footer = () => {
+  const [messages, setMessages] = useState([]);
+
+  // Function to handle new user messages in the chatbot
+  const handleNewUserMessage = (newMessage) => {
+    addUserMessage(newMessage);
+
+    // Define trigger points and responses
+    const triggers = [
+      { trigger: "hello", response: "Hello! How can I assist you today?" },
+      { trigger: "latest post", response: getLatestPostResponse() }, // Dynamic response for latest post
+      { trigger: "contact", response: "You can reach us at rathoregagan726@gmail.com or +91 9928144259." },
+      // Add more triggers as needed
+    ];
+
+    // Check for triggers in user message
+    const matchedTrigger = triggers.find(trigger => newMessage.toLowerCase().includes(trigger.trigger.toLowerCase()));
+
+    // Respond based on matched trigger
+    if (matchedTrigger) {
+      addResponseMessage(matchedTrigger.response);
+      setMessages([...messages, { type: 'user', message: newMessage }, { type: 'bot', message: matchedTrigger.response }]);
+    } else {
+      addResponseMessage("I'm sorry, I can't understand that question.");
+      setMessages([...messages, { type: 'user', message: newMessage }, { type: 'bot', message: "I'm sorry, I can't understand that question." }]);
+    }
+  };
+
+  // Function to generate response for latest post
+  const getLatestPostResponse = () => {
+    // Get the latest blog post from the dummy data (assuming 'blog' is an array of blog posts)
+    const latestBlog = blog[0]; // Assuming latest blog post is the first in the array
+    return `Latest blog post: ${latestBlog.title}. Published on ${latestBlog.date}.`;
+  };
+
   return (
     <>
       <section className='newletter'>
@@ -51,7 +87,7 @@ const Footer = () => {
           <div className='box'>
             <h3>Recent Post</h3>
             {blog.slice(0, 3).map((val) => (
-              <div className='items flexSB'>
+              <div className='items flexSB' key={val.id}>
                 <div className='img'>
                   <img src={val.cover} alt='' />
                 </div>
@@ -93,8 +129,14 @@ const Footer = () => {
           Copyright ©2022 All rights reserved | This template is made with <i className='fa fa-heart'></i> by GorkhCoder
         </p>
       </div>
+      {/* Chat Widget */}
+      <Widget
+        handleNewUserMessage={handleNewUserMessage}
+        title="Chat with Us"
+        subtitle="We're here to help!"
+      />
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

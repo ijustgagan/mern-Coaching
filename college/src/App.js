@@ -14,7 +14,6 @@ import VerifyOTP from './components/VerifyOTP';
 import ForgotPassword from './components/ForgotPassword';
 import { AuthProvider, useAuth } from './AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
-import Header from './components/common/header/Header';
 
 const App = () => {
   const { currentUser, loading } = useAuth();
@@ -26,8 +25,6 @@ const App = () => {
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-      <Header />
-        
         <div className="flex-grow">
           <Routes>
             <Route
