@@ -9,9 +9,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Routes
-app.use('/api', require('./routes/contact'));
-
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
@@ -19,6 +16,14 @@ mongoose.connect(process.env.MONGO_URI, {
 })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
+
+// Routes for handling enrollment
+const enrollRoutes = require('./routes/enrollRoutes');
+app.use('/api/enroll', enrollRoutes);
+
+// Routes for handling contact form submissions
+const contactRoutes = require('./routes/contactRoutes');
+app.use('/api/contact', contactRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 5000;

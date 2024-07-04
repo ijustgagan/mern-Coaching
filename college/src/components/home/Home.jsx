@@ -1,4 +1,5 @@
 import React from "react";
+
 import AboutCard from "../about/AboutCard";
 import Hblog from "./Hblog";
 import HAbout from "./HAbout";
@@ -13,6 +14,7 @@ const Home = () => {
     <>
       <Header />
       <Hero />
+    
       <AboutCard />
       <HAbout />
       <Testimonal />

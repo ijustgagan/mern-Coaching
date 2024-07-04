@@ -342,6 +342,7 @@ export const blog = [
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b1.webp",
+    content: "This is the detailed content of the first blog post. It can include paragraphs, images, and other HTML elements.</p><>A small river named Duden flows by their place and supplies it with the necessary regelialia."
   },
   {
     id: 2,
@@ -351,6 +352,7 @@ export const blog = [
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b2.webp",
+    content: "This is the detailed content of the second blog post. It can include paragraphs, images, and other HTML elements.</p><>A small river named Duden flows by their place and supplies it with the necessary regelialia."
   },
   {
     id: 3,
@@ -360,6 +362,7 @@ export const blog = [
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b3.webp",
+    content: "This is the detailed content of the third blog post. It can include paragraphs, images, and other HTML elements.</p><>A small river named Duden flows by their place and supplies it with the necessary regelialia."
   },
   {
     id: 4,
@@ -369,6 +372,7 @@ export const blog = [
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b4.webp",
+    content: "This is the detailed content of the fourth blog post. It can include paragraphs, images, and other HTML elements.</p><>A small river named Duden flows by their place and supplies it with the necessary regelialia."
   },
   {
     id: 5,
@@ -378,6 +382,7 @@ export const blog = [
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b5.webp",
+    content: "This is the detailed content of the fifth blog post. It can include paragraphs, images, and other HTML elements.</p><>A small river named Duden flows by their place and supplies it with the necessary regelialia."
   },
   {
     id: 6,
@@ -387,8 +392,10 @@ export const blog = [
     title: "Build your Dream Software & Engineering Career",
     desc: "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
     cover: "../images/blog/b6.webp",
+    content: "This is the detailed content of the sixth blog post. It can include paragraphs, images, and other HTML elements.</p><>A small river named Duden flows by their place and supplies it with the necessary regelialia."
   },
-]
+];
+
 export const testimonal = [
   {
     id: 1,

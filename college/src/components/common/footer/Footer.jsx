@@ -48,8 +48,9 @@ const Footer = () => {
             <span>Far far away, behind the word mountains</span>
           </div>
           <div className='right row'>
-            <input type='text' placeholder='Enter email address' />
-            <i className='fa fa-paper-plane'></i>
+            <input className=" text-black " type='text' placeholder='Enter email address' />
+            <button className=" m-0"><i className='fa fa-paper-plane'></i></button>
+            
           </div>
         </div>
       </section>

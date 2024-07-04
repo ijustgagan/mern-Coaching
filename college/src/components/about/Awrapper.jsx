@@ -4,7 +4,7 @@ import { awrapper } from "../../dummydata.js"
 const Awrapper = () => {
   return (
     <>
-      <section className='awrapper'>
+      <section className='awrapper items shadow animate__animated animate__fadeIn transition-transform transform hover:scale-105 hover:shadow-lg'>
         <div className='container grid'>
           {awrapper.map((val) => {
             return (

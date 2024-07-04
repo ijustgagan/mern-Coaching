@@ -50,7 +50,7 @@ const Header = () => {
                 </Link>
               </li>
               <li className="p-4 border-b">
-                <Link to="/allcourses" className="flex items-center p-2 text-base font-semibold hover:bg-gray-700 rounded-md">
+                <Link to="/courses" className="flex items-center p-2 text-base font-semibold hover:bg-gray-700 rounded-md">
                   <ClipboardDocumentListIcon className="h-6 w-6 mr-3" />
                   All Courses
                 </Link>

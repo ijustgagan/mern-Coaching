@@ -14,6 +14,8 @@ import VerifyOTP from './components/VerifyOTP';
 import ForgotPassword from './components/ForgotPassword';
 import { AuthProvider, useAuth } from './AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import Enroll from './components/Enroll';
+import SingleBlogPost from './components/SingleBlogPost';
 
 const App = () => {
   const { currentUser, loading } = useAuth();
@@ -52,13 +54,14 @@ const App = () => {
               } 
             />
             <Route 
-              path="/allcourses" 
+              path="/courses" 
               element={
                 <ProtectedRoute>
                   <CourseHome />
                 </ProtectedRoute>
               } 
             />
+             <Route path='/blog-post/:postId' element={<ProtectedRoute><SingleBlogPost/></ProtectedRoute>} />
             <Route 
               path="/team" 
               element={
@@ -91,6 +94,11 @@ const App = () => {
                 </ProtectedRoute>
               } 
             />
+            <Route path='/Enroll' element={
+              <ProtectedRoute>
+              <Enroll/>
+              </ProtectedRoute>
+            }/>
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>

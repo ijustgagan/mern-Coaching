@@ -7,8 +7,8 @@ const Blog = () => {
   return (
     <>
       <Back title='Blog Posts' />
-      <section className='blog padding'>
-        <div className='container grid2'>
+      <section className='blog padding '>
+        <div className='container grid2 mt-6'>
           <BlogCard />
         </div>
       </section>
